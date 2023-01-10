@@ -1,0 +1,15 @@
+C:\Users\Professional\RiderProjects\Grind\Grind\bin\Debug\net6.0\Grind.exe
+C:\Users\Professional\RiderProjects\Grind\Grind\bin\Debug\net6.0\Grind.deps.json
+C:\Users\Professional\RiderProjects\Grind\Grind\bin\Debug\net6.0\Grind.runtimeconfig.json
+C:\Users\Professional\RiderProjects\Grind\Grind\bin\Debug\net6.0\Grind.dll
+C:\Users\Professional\RiderProjects\Grind\Grind\bin\Debug\net6.0\Grind.pdb
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\Grind.csproj.AssemblyReference.cache
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\Grind.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\Grind.AssemblyInfoInputs.cache
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\Grind.AssemblyInfo.cs
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\Grind.csproj.CoreCompileInputs.cache
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\Grind.dll
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\refint\Grind.dll
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\Grind.pdb
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\Grind.genruntimeconfig.cache
+C:\Users\Professional\RiderProjects\Grind\Grind\obj\Debug\net6.0\ref\Grind.dll
