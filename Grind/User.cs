@@ -2,6 +2,7 @@ public class User
 {
     private string _username;
     private string _password;
+    private bool _isRegistered;
     public bool Login = false;
     public Task Task = new Task();
     public bool IsBanned = false;
@@ -19,17 +20,31 @@ public class User
 
     public void RegisterAccount()
     {
+        if (_isRegistered)
+        {
+            Console.WriteLine("Вы уже зарегестрированы!");
+            return;
+        }
         Console.Write("Введите ваше имя: ");
         _username = Console.ReadLine();
-        Console.WriteLine("\n Имя сохранено. \n");
+        Console.WriteLine("Имя сохранено.");
 
         Console.Write("Придумайте ваш пароль: ");
         _password = Console.ReadLine();
-        Console.WriteLine("\n Пароль сохранен. \n");
+        Console.WriteLine("Пароль сохранен.");
+        Console.WriteLine("\n Вы успешно зарегестрировались! \n");
+
+        _isRegistered = true;
     }
 
     public void Authorization()
     {
+        if (!_isRegistered)
+        {
+            Console.WriteLine("Пожалуйста, зарегестрируйтесь!");
+            RegisterAccount();
+            return;
+        }
         if (!Login && !IsBanned)
         {
             for (int i = 5 - 1; i >= 0; i--)
@@ -50,7 +65,7 @@ public class User
                 }
                 else
                 {
-                    Console.WriteLine($"Ошибка авторизации! Осталось {i} попытки \n");
+                    Console.WriteLine($"Ошибка авторизации! Осталось {i} попытки(-ок) \n");
                 }
             }
 
@@ -71,7 +86,7 @@ public class User
 
     public void ChangePassword()
     {
-        bool isRightPassword = true;
+        bool isRightPassword = false;
         while (!isRightPassword)
         {
             Console.Write("Введите старый пароль: ");
@@ -90,7 +105,7 @@ public class User
                     Console.Write("Введите новый пароль: ");
                     string newPassword = Console.ReadLine();
                     _password = newPassword;
-                    Console.WriteLine("\n Пароль успешно изменён!");
+                    Console.WriteLine("\n Пароль успешно изменён! \n");
                     isRightPassword = true;
                 }
             }

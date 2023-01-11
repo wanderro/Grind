@@ -1,13 +1,13 @@
 public class Level : User
 {
-    public static int currentLevel = 0;
+    public static int CurrentLevel = 0;
     public static int requiredExperience = 2;
     public static int XP = 0;
     
     public static void CurrentLevelInformation()
     {
         UpdateLevel();
-        Console.WriteLine(currentLevel);
+        Console.WriteLine(CurrentLevel);
         Console.WriteLine(XP);
     }
 
@@ -23,7 +23,7 @@ public class Level : User
         {
             if (XP >= requiredExperience)
             {
-                currentLevel++;
+                CurrentLevel++;
                 requiredExperience *= 2;
             }
             else

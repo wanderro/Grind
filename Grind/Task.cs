@@ -15,9 +15,12 @@ public class Task
         int taskCost = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine();
 
-        Tasks.Add(taskName, taskCost);
-        TempTasks.Add(Count,taskName);
-        Count++;
+        if (!(Tasks.ContainsKey(taskName) && Tasks.ContainsValue(taskCost)) && !(TempTasks.ContainsKey(Count)))
+        {
+            Tasks.Add(taskName, taskCost);
+            TempTasks.Add(Count,taskName);
+            Count++;
+        }
 
     }
 
@@ -32,13 +35,16 @@ public class Task
         int count = Convert.ToInt32(Console.ReadLine());
         
         string nameOfTask = TempTasks[count];
-        Level.AddXP(Tasks[nameOfTask]);
-        Tasks.Remove(nameOfTask);
-        Console.WriteLine();
         CountOfCompletedTasks++;
+        Level.AddXP(Tasks[nameOfTask]);
+        if (Tasks.Remove(nameOfTask))
+        {
+            TempTasks.Remove(count);
+            Console.WriteLine();
 
-        Console.WriteLine("Задание выполнено!");
-        Console.WriteLine();
+            Console.WriteLine("Задание выполнено!");
+            Console.WriteLine();
+        }
     }
     
 
@@ -66,12 +72,15 @@ public class Task
             return;
         }
         Console.Write("Введите номер задания, которое хотите удалить: ");
-        int count = Convert.ToInt32(Console.ReadLine());
-        string nameOfTask = TempTasks[count];
-        Tasks.Remove(nameOfTask);
-        Console.WriteLine();
+        var count = Convert.ToInt32(Console.ReadLine());
+        var nameOfTask = TempTasks[count];
+        if (Tasks.Remove(nameOfTask))
+        {
+            TempTasks.Remove(count);
+            Console.WriteLine();
 
-        Console.WriteLine("Задание удалено!");
-        Console.WriteLine();
+            Console.WriteLine("Задание удалено!");
+            Console.WriteLine();
+        }
     }
 }
