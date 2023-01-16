@@ -26,13 +26,13 @@ public class Menu
                     _thisUser.AddTask();
                     break;
                 case "2":
-                    _thisUser.Task.PrintTasks();
+                    _thisUser.TodoList.PrintTasks();
                     break;
                 case "3":
-                    _thisUser.Task.DeleteTask();
+                    _thisUser.TodoList.DeleteTask();
                     break;
                 case "4":
-                    _thisUser.Task.CompletedTask();
+                    _thisUser.TodoList.CompletedTask();
                     break;
                 case "5":
                     ShowGlobalMenu();
@@ -112,7 +112,7 @@ public class Menu
                         Level.CurrentLevelInformation();
                         break;
                     case "2":
-                        var a = _thisUser.Task.CountOfCompletedTasks;
+                        var a = _thisUser.TodoList.CountOfCompletedTasks;
                         Console.WriteLine(a);
                         break;
                     case "3":

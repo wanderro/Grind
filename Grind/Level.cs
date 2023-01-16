@@ -7,8 +7,9 @@ public class Level : User
     public static void CurrentLevelInformation()
     {
         UpdateLevel();
-        Console.WriteLine(CurrentLevel);
-        Console.WriteLine(XP);
+        Console.WriteLine("Текущий уровень: " + CurrentLevel);
+        Console.WriteLine("Текущее кол-во опыта: " + XP + "/" + requiredExperience);
+        
     }
 
     public static void AddXP(int count)

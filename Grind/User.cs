@@ -3,9 +3,9 @@ public class User
     private string _username;
     private string _password;
     private bool _isRegistered;
-    public bool Login = false;
-    public Task Task = new Task();
-    public bool IsBanned = false;
+    protected internal bool Login = false;
+    protected internal TodoList TodoList = new TodoList();
+    protected internal bool IsBanned = false;
 
     public void CurrentLevelInformation()
     {
@@ -81,7 +81,7 @@ public class User
 
     public void AddTask()
     {
-        Task.Add();
+        TodoList.Add();
     }
 
     public void ChangePassword()
